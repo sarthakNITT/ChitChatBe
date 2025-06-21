@@ -1,0 +1,29 @@
+{
+  "name": "project-chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsc -b && node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
+    "@mistralai/mistralai": "^1.7.2",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/ws": "^8.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "openai": "^5.6.0",
+    "readline-sync": "^1.4.10",
+    "redis": "^5.5.6",
+    "typescript": "^5.8.3",
+    "ws": "^8.18.2"
+  }
+}
