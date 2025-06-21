@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/db/connectdb.ts","./src/model/chatschema.ts"],"version":"5.8.3"}
+{"root":["./src/index.ts","./src/mistral/ai.ts","./src/controllers/controller.ts","./src/db/checkdb.ts","./src/db/connectdb.ts","./src/express/server.ts","./src/model/chatschema.ts","./src/redis/client.ts","./src/redis/store.ts","./src/route/route.ts","./src/websocket/ws.ts"],"version":"5.8.3"}
