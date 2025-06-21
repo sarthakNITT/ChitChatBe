@@ -66,14 +66,15 @@ export function conectWS () {
                                 const aiResponse = await MistralAI(parsedMessage.payload.message)
                                 u.userSoket.send(JSON.stringify({
                                     message: aiResponse,
-                                    clientId: "AI"
+                                    clientId: `AI${parsedMessage.payload.roomId}`
                                 }))
+                                await ConnectRedis(aiResponse as string, `AI_${parsedMessage.payload.roomId}`, parsedMessage.payload.roomId)
                             }
                         }
                         
                     }
                 })
-                ConnectRedis(parsedMessage.payload.message, parsedMessage.payload.clientId, parsedMessage.payload.roomId)
+                ConnectRedis(parsedMessage.payload.message, parsedMessage.payload.clientId, parsedMessage.payload.roomId, )
             }
             if(parsedMessage.type === "leave"){
                 const clientId = parsedMessage.payload.clientId; 
