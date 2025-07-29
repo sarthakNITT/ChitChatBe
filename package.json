@@ -15,8 +15,10 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.54.0",
     "@mistralai/mistralai": "^1.7.2",
-    "@types/cors": "^2.8.18",
-    "@types/express": "^5.0.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.0.10",
     "@types/ws": "^8.18.1",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
