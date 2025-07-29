@@ -27,10 +27,10 @@ export const getID = async (req: Request, res: Response) => {
     const responseMongo = await ChatModel.find()
     const responseRedis = await client.keys(`AllChats:*`)
     const arr: any = []
-    responseRedis.forEach(e => {
+    responseRedis.forEach((e): any => {
         arr.push(e.split(":")[1])
     })
-    responseMongo.forEach(e => {
+    responseMongo.forEach((e): any => {
         arr.push(e.roomID.toString())
     })
     res.send(arr)

@@ -19,7 +19,7 @@ const wss = new WebSocketServer({port: Number(wsPORT)})
 let clients: user[] = []
 
 export function conectWS () {
-    wss.on("connection", async (socket) => {
+    wss.on("connection", async (socket): Promise<any> => {
         console.log("connection successfull");
         
         socket.on("message", async (message: string) => {

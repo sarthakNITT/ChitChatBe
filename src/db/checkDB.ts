@@ -17,7 +17,7 @@ export async function CheckDb (key: string, chats: any) {
             console.log("new room chat stored for roomID: " + key)
             await client.del(key)
         })
-        .catch((e)=>console.log("Error while storing new chat room: " + e))
+        .catch((e): any=>console.log("Error while storing new chat room: " + e))
 
     }else{
         await ChatModel.updateOne({roomID: splitRoomID}, {
@@ -27,6 +27,6 @@ export async function CheckDb (key: string, chats: any) {
             console.log("Room Chat updated for roomId: " + key)
             await client.del(key)
         })
-        .catch((e)=>console.log("Error while storing new chat room: " + e))
+        .catch((e): any=>console.log("Error while storing new chat room: " + e))
     }
 }
