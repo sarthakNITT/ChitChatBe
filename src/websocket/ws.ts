@@ -3,6 +3,7 @@ import { MistralAI } from "../Mistral/AI"
 import { ConnectRedis } from "../redis/store"
 import { client } from "../redis/client"
 import { ChatModel } from "../model/chatSchema"
+import { server } from '../express/server';
 
 type Tuser = {
     userID: string,
@@ -15,7 +16,8 @@ interface user {
 }
 
 const wsPORT = process.env.WSPORT || 8080
-const wss = new WebSocketServer({port: Number(wsPORT)})
+// const wss = new WebSocketServer({port: Number(wsPORT)})
+const wss = new WebSocketServer({ server });
 let clients: user[] = []
 
 export function conectWS () {
