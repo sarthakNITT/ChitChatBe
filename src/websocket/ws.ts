@@ -14,7 +14,7 @@ interface user {
     allUsers: Tuser[]
 }
 
-const wsPORT = process.env.WSPORT
+const wsPORT = process.env.WSPORT || 8080
 const wss = new WebSocketServer({port: Number(wsPORT)})
 let clients: user[] = []
 
